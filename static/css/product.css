@@ -1,0 +1,28 @@
+.main-content {
+	background: white;
+}
+
+.video-container {
+	margin-top: 20px;
+	border-top: solid 1px #ddd;
+	padding: 20px 0;
+}
+
+.video-container > iframe {
+	max-width: 100%;
+}
+
+.thumb-container {
+	width: 25%;
+	float: left;
+}
+
+
+/*	MEDIA QUERIES	*/
+
+@media (min-width: 768px) {
+	.thumb-container {
+		width: auto;
+		float: none;
+	}
+}

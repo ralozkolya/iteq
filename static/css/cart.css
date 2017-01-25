@@ -1,0 +1,45 @@
+[type="number"] {
+	margin-left: 20px;
+	width: 70px;
+	display: inline-block;
+}
+
+.main-container {
+	text-align: center;
+}
+
+.item {
+	margin: 10px 0;
+	background: white;
+	border-radius: 5px;
+	box-shadow: 0 1px 2px #ccc;
+}
+
+.item > * {
+	padding: 5px 0;
+}
+
+.thumb {
+	height: 100px;
+}
+
+.btn-danger {
+	margin-right: 5px;
+}
+
+.price {
+	padding-right: 5px;
+}
+
+/*	MEDIA QUERIES	*/
+
+@media (min-width: 768px) {
+
+	.btn-danger {
+		margin-right: 20px;
+	}
+
+	.high {
+		line-height: 100px;
+	}
+}

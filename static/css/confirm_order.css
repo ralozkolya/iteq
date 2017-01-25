@@ -1,0 +1,17 @@
+.product {
+	margin: 10px 0;
+	text-align: center;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+	.product > div {
+		width: 25%;
+		float: left;
+	}
+
+	.pad-top {
+		padding-top: 20px;
+	}
+}

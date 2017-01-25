@@ -1,0 +1,6 @@
+{
+    "require": {
+        "masterjoa/htmlpurifier-standalone": "^4.7",
+        "guzzlehttp/guzzle": "^6.2"
+    }
+}
