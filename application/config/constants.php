@@ -52,5 +52,5 @@ define('PENDING', 1);
 define('COMPLETED', 2);
 define('FAILED', 3);
 
-define('SHOP_MAIL', 'shop@example.com');
+define('SHOP_MAIL', 'shop@iteq.ge');
 define('INFO_MAIL', 'info@example.com');
