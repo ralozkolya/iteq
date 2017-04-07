@@ -212,6 +212,10 @@ img {
 		box-shadow: 0 1px 2px #ccc;
 	}
 
+	.submenu a {
+		white-space: nowrap;
+	}
+
 	.langs {
 		position: absolute;
 		top: 0;
