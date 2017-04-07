@@ -6,7 +6,7 @@
 			<div class="col-xs-12">
 				<form id="filter-form"
 					class="form-inline"
-					action="<?php echo current_url(); ?>">
+					action="<?php echo locale_url('products'); ?>">
 					<?php if(empty($category)): ?>
 						<input type="hidden" name="category" value="all">
 					<?php else: ?>
