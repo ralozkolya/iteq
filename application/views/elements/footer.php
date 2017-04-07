@@ -12,7 +12,7 @@
 		</div>
 		<div class="logos">
 			<a target="_blank" href="https://www.facebook.com/Iteqgeorgia"><img alt="Facebook" src="<?php echo static_url('img/fb_icon.png'); ?>"></a>
-			<a href="#"><img alt="Youtube" src="<?php echo static_url('img/youtube_icon.png'); ?>"></a>
+			<!-- <a href="#"><img alt="Youtube" src="<?php echo static_url('img/youtube_icon.png'); ?>"></a> -->
 		</div>
 	</div>
 </div>
