@@ -13,7 +13,7 @@
 
 		<div class="content">
 			<div class="map">
-				<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJXcA_AFIMREARH0A9y4qg0q8&key=AIzaSyAF3z4Gkut40hFvyOjGdh2r9jtSHUyHk7s" allowfullscreen></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d744.8921479921365!2d44.82706223554175!3d41.68665962867556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7a39577e45c03c61!2sITEQ+GEORGIA!5e0!3m2!1sen!2sge!4v1491573368232" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 			<div class="container">
 				<div class="row">
