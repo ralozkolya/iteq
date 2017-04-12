@@ -24,6 +24,10 @@
 					</div>
 					<div class="form-group">
 						<select class="form-control" name="sort">
+							<option value="<?php echo SORT_DEFAULT; ?>"
+								<?php if($sort === SORT_DEFAULT) echo 'selected'; ?>>
+								<?php echo lang('default'); ?>
+							</option>
 							<option value="<?php echo SORT_ALPHA_ASC; ?>"
 								<?php if($sort === SORT_ALPHA_ASC) echo 'selected'; ?>>
 								<?php echo lang('alpha_asc'); ?>

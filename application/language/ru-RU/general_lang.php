@@ -5,6 +5,7 @@ $lang['login'] = 'Вход';
 $lang['logout'] = 'Выйти';
 $lang['profile'] = 'Профиль';
 
+$lang['default'] = 'По умолчанию';
 $lang['alpha_asc'] = 'Сортирование по имени: а-я';
 $lang['alpha_desc'] = 'Сортирование по имени: я-а';
 $lang['price_asc'] = 'От дешевых к дорогим';

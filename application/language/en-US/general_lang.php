@@ -5,6 +5,7 @@ $lang['login'] = 'Log in';
 $lang['logout'] = 'Log out';
 $lang['profile'] = 'Profile';
 
+$lang['default'] = 'Default';
 $lang['alpha_asc'] = 'Sort by name: a-z';
 $lang['alpha_desc'] = 'Sort by name: z-a';
 $lang['price_asc'] = 'Sort by price ascending';

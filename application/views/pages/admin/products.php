@@ -2,7 +2,9 @@
 <html>
 <head>
 	<?php $this->load->view('elements/admin/head'); ?>
+	<link rel="stylesheet" href="<?php echo static_url('css/admin/sortable.css?v='.V); ?>">
 	<script src="<?php echo static_url('js/admin/products.js?v='.V); ?>"></script>
+	<script src="<?php echo static_url('js/admin/sortable.js?v='.V); ?>"></script>
 </head>
 <body>
 	<?php $this->load->view('elements/admin/sidebar'); ?>
@@ -27,9 +29,11 @@
 				<div class="col-sm-6">
 					<h3><?php echo lang('existing_products'); ?></h3>
 					<?php if(!empty($products)): ?>
-						<table class="table table-striped">
+						<table class="table table-striped sortable-table">
 							<?php foreach($products as $p): ?>
-								<tr>
+								<tr data-id="<?php echo $p->id; ?>"
+									data-priority="<?php echo $p->priority; ?>"
+									class="sortable">
 									<td><?php echo $p->name; ?></td>
 									<td class="glyph-container">
 										<a href="<?php echo base_url('admin/product/'.$p->id); ?>">

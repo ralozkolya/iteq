@@ -33,7 +33,7 @@ define('EN', 'en-US');
 define('GE', 'ka-GE');
 define('RU', 'ru-RU');
 
-define('V', 2);
+define('V', 3);
 
 $secure = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (!empty($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443);
 $protocol = $secure ? 'https://' : 'http://';
@@ -43,6 +43,7 @@ define('PROTOCOL', $protocol);
 define('PRODUCTS_PER_PAGE', 12);
 define('ITEMS_PER_PAGE_ADMIN', 30);
 
+define('SORT_DEFAULT', 'default');
 define('SORT_ALPHA_ASC', 'a-z');
 define('SORT_ALPHA_DESC', 'z-a');
 define('SORT_PRICE_ASC', '1-9');

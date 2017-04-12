@@ -16,6 +16,9 @@
 <!-- jQuery 1.12.2 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
+<!-- jQuery UI -->
+<script src="<?php echo static_url('js/admin/jquery-ui.min.js'); ?>"></script>
+
 <!-- CKeditor -->
 <script src="<?php echo static_url('ckeditor/ckeditor.js'); ?>"></script>
 <script src="<?php echo static_url('ckeditor/adapters/jquery.js'); ?>"></script>

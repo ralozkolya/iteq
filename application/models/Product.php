@@ -95,6 +95,8 @@ class Product extends MY_Model {
 			'*', $lang.'_name as name',
 		));
 
+		$this->db->order_by('priority');
+
 		$products = parent::get_list(ITEMS_PER_PAGE_ADMIN, $offset);
 
 		$total_rows = $this->db->get($this->table)->num_rows();
@@ -114,6 +116,14 @@ class Product extends MY_Model {
 		}
 
 		return parent::add($data);
+	}
+
+	public function change_priority($id, $priority) {
+		
+		return parent::edit([
+			'id' => $id,
+			'priority' => $priority,
+		]);
 	}
 
 	public function edit($data) {
@@ -169,7 +179,7 @@ class Product extends MY_Model {
 			$this->db->select(array(
 				$lang.'_name as name',
 				$lang.'_description as description',
-				'ka_name', 'en_name', 'ru_name',
+				'ka_name', 'en_name', 'ru_name', 'priority',
 				'products.id', 'slug', 'price', 'gallery.image',
 			));
 
@@ -183,6 +193,10 @@ class Product extends MY_Model {
 
 		if(!empty($filter['sort'])) {
 			$sort = $filter['sort'];
+
+			if($sort === SORT_DEFAULT) {
+				$this->db->order_by('products.priority');
+			}
 
 			if($sort === SORT_ALPHA_ASC) {
 				$this->db->order_by('products.'.$lang.'_name');
@@ -201,12 +215,12 @@ class Product extends MY_Model {
 			}
 
 			else {
-				$this->db->order_by('products.'.$lang.'_name');
+				$this->db->order_by('products.priority');
 			}
 		}
 
 		else {
-			$this->db->order_by('products.'.$lang.'_name');
+			$this->db->order_by('products.priority');
 		}
 
 		if(!empty($filter['search'])) {

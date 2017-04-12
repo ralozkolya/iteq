@@ -536,6 +536,25 @@ class Admin extends CI_Controller {
 		redirect($this->agent->referrer());
 	}
 
+	public function update_priority() {
+
+		$post = $this->input->post();
+
+		if($post) {
+			foreach($post as $id => $priority) {
+				if(is_numeric($priority)) {
+					$this->Product->change_priority($id, $priority);
+					echo $id;
+				}
+			}
+
+			echo json_encode(['status' => 'success']);
+			return;
+		}
+
+		echo json_encode(['status' => 'error']);
+	}
+
 	public function user() {
 
 		if($this->input->post()) {
@@ -563,7 +582,6 @@ class Admin extends CI_Controller {
 
 		$this->load->view('pages/admin/user', $this->data);
 	}
-
 
 	public function add($type, $data) {
 
@@ -657,7 +675,6 @@ class Admin extends CI_Controller {
 			$this->data['error_message'] = validation_errors('<div>', '</div>');
 		}
 	}
-
 
 	public function delete($type, $id) {
 
