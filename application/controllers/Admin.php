@@ -544,7 +544,6 @@ class Admin extends CI_Controller {
 			foreach($post as $id => $priority) {
 				if(is_numeric($priority)) {
 					$this->Product->change_priority($id, $priority);
-					echo $id;
 				}
 			}
 
