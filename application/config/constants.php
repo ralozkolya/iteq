@@ -33,7 +33,7 @@ define('EN', 'en-US');
 define('GE', 'ka-GE');
 define('RU', 'ru-RU');
 
-define('V', 3);
+define('V', 4);
 
 $secure = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (!empty($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443);
 $protocol = $secure ? 'https://' : 'http://';
