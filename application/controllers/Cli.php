@@ -12,6 +12,8 @@ class Cli extends CI_Controller {
 		$this->load->model('Order');
 
 		$this->Order->update_recents();
+
+		echo 'TBC Bank day last closed at: ' . date('Y-m-d H:i:s', strtotime('now')) . "\n";
 	}
 
 }
