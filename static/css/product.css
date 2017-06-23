@@ -18,6 +18,10 @@
 	float: left;
 }
 
+.free-delivery-banner {
+	width: 180px;
+}
+
 
 /*	MEDIA QUERIES	*/
 
@@ -25,5 +29,9 @@
 	.thumb-container {
 		width: auto;
 		float: none;
+	}
+
+	.free-delivery-banner {
+		float: right;
 	}
 }
