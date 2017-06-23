@@ -20,7 +20,6 @@
 
 .free-delivery-banner {
 	width: 180px;
-	float: right;
 }
 
 
@@ -30,5 +29,9 @@
 	.thumb-container {
 		width: auto;
 		float: none;
+	}
+
+	.free-delivery-banner {
+		float: right;
 	}
 }

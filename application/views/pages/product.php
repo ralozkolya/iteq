@@ -70,9 +70,10 @@
 									</h4>
 									<br>
 								</div>
-								<div class="col-sm-6">
+								<div class="col-sm-6 text-center clearfix">
 									<img class="free-delivery-banner" src="<?php echo static_url('img/banner.png'); ?>" alt="Free delivery over 50 GEL">
 								</div>
+								<br>
 							</div>
 							<div class="row">
 								<div class="col-sm-12">
