@@ -50,6 +50,11 @@ class Site extends MY_Controller {
 		$this->load->view('pages/product', $this->data);
 	}
 
+	public function credit() {
+
+		$this->load->view('pages/credit', $this->data);
+	}
+
 	public function shop($page = 1) {
 
 		$this->load_products('shop', $page);

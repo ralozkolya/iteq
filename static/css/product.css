@@ -22,6 +22,12 @@
 	width: 180px;
 }
 
+.okey-credit {
+	max-width: 200px;
+	border: solid 1px #f39579;
+	border-radius: 15px;
+}
+
 
 /*	MEDIA QUERIES	*/
 

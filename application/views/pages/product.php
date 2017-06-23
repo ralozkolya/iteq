@@ -92,8 +92,8 @@
 													</div>
 													<br>
 													<div>
-														<a href="#">
-															<img src="<?php echo static_url('img/okey.png?v='.V); ?>" alt="Okey credit">
+														<a href="<?php echo locale_url('credit'); ?>">
+															<img class="okey-credit" src="<?php echo static_url('img/okey.png?v='.V); ?>" alt="Okey credit">
 														</a>
 													</div>
 												<?php endif; ?>
