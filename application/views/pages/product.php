@@ -73,14 +73,6 @@
 										&nbsp;&nbsp;<?php echo $product->price_label; ?>	
 									</h4>
 									<br>
-								</div>
-								<div class="col-sm-6 text-center clearfix">
-									<img class="free-delivery-banner" src="<?php echo static_url('img/banner.png'); ?>" alt="Free delivery over 50 GEL">
-								</div>
-								<br>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
 									<?php if($product->for_sale && $product->in_stock): ?>
 										<div>
 											<?php if($product->in_stock): ?>
@@ -91,11 +83,19 @@
 														<?php echo lang('added'); ?>	
 													</a>
 												<?php else: ?>
-													<a
-														class="btn btn-success"
-														href="<?php echo base_url('add_to_cart/'.$product->id); ?>">
-														<?php echo lang('add_to_cart'); ?>	
-													</a>
+													<div>
+														<a
+															class="btn btn-success"
+															href="<?php echo base_url('add_to_cart/'.$product->id); ?>">
+															<?php echo lang('add_to_cart'); ?>	
+														</a>
+													</div>
+													<br>
+													<div>
+														<a href="<?php echo locale_url('credit'); ?>">
+															<img class="okey-credit" src="<?php echo static_url('img/okey.png?v='.V); ?>" alt="Okey credit">
+														</a>
+													</div>
 												<?php endif; ?>
 											<?php else: ?>
 												<span class="text-danger"><?php echo lang('out_of_stock'); ?></span>
@@ -103,6 +103,14 @@
 										</div>
 										<br>
 									<?php endif; ?>
+								</div>
+								<div class="col-sm-6 text-center clearfix">
+									<img class="free-delivery-banner" src="<?php echo static_url('img/banner.png'); ?>" alt="Free delivery over 50 GEL">
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-sm-12">
 									<?php echo $product->description; ?>
 								</div>
 							</div>
