@@ -4,8 +4,10 @@
 	<?php $this->load->view('elements/head'); ?>
 
 	<link rel="stylesheet" href="<?php echo static_url('css/product.css?v='.V); ?>">
+	<link rel="stylesheet" href="<?php echo static_url('css/jquery.fancybox.min.css'); ?>">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.15/jquery.zoom.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.15/jquery.zoom.min.js"></script> -->
+	<script src="<?php echo static_url('js/jquery.fancybox.min.js'); ?>"></script>
 	<script src="<?php echo static_url('js/product.js?v='.V); ?>"></script>
 </head>
 <body>
@@ -30,7 +32,9 @@
 									</div>
 									<div class="col-sm-10 text-center">
 										<div id="zoom">
-											<img alt="<?php echo $product->name; ?>">
+											<a data-fancybox>
+												<img alt="<?php echo $product->name; ?>">
+											</a>
 										</div>
 									</div>
 								<?php else: ?>
