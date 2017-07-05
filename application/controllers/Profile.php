@@ -9,7 +9,7 @@ class Profile extends MY_Controller {
 
 		if(!$this->data['user']) {
 			$this->session->set_flashdata('error_message', lang('not_authorized'));
-			redirect(locale_url());
+			redirect(locale_url('login'));
 		}
 
 		$this->data['prof_highlighted'] = 'none';

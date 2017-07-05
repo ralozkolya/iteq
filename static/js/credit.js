@@ -3,8 +3,8 @@ $(function(){
 		var val = $(this).val();
 
 		if(!isNaN(parseInt(val))) {
-			$('.submit-order').attr('href', url.localeUrl + '/order/' + val).removeClass('disabled');
-
+			$('input[name=address]').val(val);
+			$('.submit-button').removeClass('disabled');
 		}
 	});
 

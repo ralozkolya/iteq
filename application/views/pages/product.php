@@ -77,11 +77,13 @@
 										<div>
 											<?php if($product->in_stock): ?>
 												<?php if(array_key_exists($product->id, $cart)): ?>
-													<a
-														class="btn btn-default disabled"
-														href="<?php echo base_url('add_to_cart/'.$product->id); ?>">
-														<?php echo lang('added'); ?>	
-													</a>
+													<div>
+														<a
+															class="btn btn-default disabled"
+															href="<?php echo base_url('add_to_cart/'.$product->id); ?>">
+															<?php echo lang('added'); ?>	
+														</a>
+													</div>
 												<?php else: ?>
 													<div>
 														<a
@@ -90,13 +92,19 @@
 															<?php echo lang('add_to_cart'); ?>	
 														</a>
 													</div>
-													<br>
-													<div>
-														<a href="<?php echo locale_url('credit'); ?>">
-															<img class="okey-credit" src="<?php echo static_url('img/okey.png?v='.V); ?>" alt="Okey credit">
-														</a>
-													</div>
 												<?php endif; ?>
+												<br>
+												<div>
+													<a href="<?php echo locale_url("credit?product={$product->id}"); ?>">
+														<img class="okey-credit" src="<?php echo static_url('img/okey.png?v='.V); ?>" alt="Okey installment">
+													</a>
+												</div>
+												<br>
+												<div>
+													<a href="http://www.tbcbank.ge/web/ka/apply-online-for-installment">
+														<img class="tbc-credit" src="<?php echo static_url('img/tbc.png?v='.V); ?>" alt="TBC installment">
+													</a>
+												</div>
 											<?php else: ?>
 												<span class="text-danger"><?php echo lang('out_of_stock'); ?></span>
 											<?php endif; ?>
