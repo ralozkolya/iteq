@@ -21,7 +21,7 @@
 						</div>
 						<br>
 						<form action="<?php echo locale_url('confirm_credit') ?>" method="post">
-							<input type="hidden" name="address">
+							<input id="address" type="hidden" name="address">
 							<input type="hidden" name="product" value="<?php echo $product->id; ?>">
 							<div class="form-group">
 								<input type="submit" class="btn btn-success disabled submit-button" value="<?php echo lang('continue'); ?>">
