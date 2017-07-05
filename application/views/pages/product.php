@@ -92,7 +92,7 @@
 													</div>
 													<br>
 													<div>
-														<a href="<?php echo locale_url('credit'); ?>">
+														<a href="<?php echo locale_url("credit?product={$product->id}"); ?>">
 															<img class="okey-credit" src="<?php echo static_url('img/okey.png?v='.V); ?>" alt="Okey credit">
 														</a>
 													</div>

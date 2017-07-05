@@ -4,7 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Site extends MY_Controller {
 
 	public function __construct() {
-
 		parent::__construct();
 	}
 
@@ -48,11 +47,6 @@ class Site extends MY_Controller {
 		$this->data['highlighted'] = 'products';
 
 		$this->load->view('pages/product', $this->data);
-	}
-
-	public function credit() {
-
-		$this->load->view('pages/credit', $this->data);
 	}
 
 	public function shop($page = 1) {
@@ -110,6 +104,42 @@ class Site extends MY_Controller {
 		$this->load->view('pages/cart', $this->data);
 	}
 
+	public function credit() {
+
+		$user = $this->data['user'];
+
+		if(!$user) {
+			redirect(locale_url('login'));
+		}
+
+		$this->load->model(['Product', 'Address', 'Gallery']);
+
+		$this->data['addresses'] = $this->Address->get_for_user($user->id);
+		$this->data['product'] = $product = $this->Product->get($this->input->get('product'));
+		$this->data['images'] = $this->Gallery->get_for_product($product->id);
+
+		if(!$product) {
+			show_404();
+		}
+
+		$this->load->view('pages/credit', $this->data);
+	}
+
+	public function confirm_credit() {
+
+		$user = $this->data['user'];
+
+		if(!$user) {
+			redirect(locale_url());
+		}
+
+		$this->load->library('Okey');
+
+		$post = $this->input->post();
+
+		echo $this->okey->check($user->id, $post['address'], $post['product']);
+	}
+
 	public function confirm_order() {
 
 		$user = $this->data['user'];
@@ -118,7 +148,7 @@ class Site extends MY_Controller {
 			redirect(locale_url('login'));
 		}
 
-		$this->load->model(array('Product', 'Address'));
+		$this->load->model(['Product', 'Address']);
 
 		$this->data['addresses'] = $this->Address->get_for_user($user->id);
 
@@ -146,7 +176,9 @@ class Site extends MY_Controller {
 			$password = $post['password'];
 
 			if($this->auth->login($email, $password)) {
-				redirect(locale_url());
+				$referrer = $this->session->flashdata('referrer');
+				$referrer = empty($referrer) ? locale_url() : $referrer;
+				redirect($referrer);
 			}
 
 			else {
@@ -156,6 +188,7 @@ class Site extends MY_Controller {
 		}
 
 		$this->data['title'] = lang('login').' | '.$this->data['title'];
+		$this->session->set_flashdata('referrer', $this->agent->referrer());
 
 		$this->load->view('pages/login', $this->data);
 	}
