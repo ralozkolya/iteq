@@ -28,6 +28,12 @@
 	border-radius: 15px;
 }
 
+.tbc-credit {
+	max-width: 200px;
+	border: solid 1px #00A3E0;
+	border-radius: 15px;
+}
+
 
 /*	MEDIA QUERIES	*/
 
