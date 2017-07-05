@@ -3,7 +3,7 @@ $(function(){
 		var val = $(this).val();
 
 		if(!isNaN(parseInt(val))) {
-			$('input[name=address]').val(val);
+			$('#address').val(val);
 			$('.submit-button').removeClass('disabled');
 		}
 	});
