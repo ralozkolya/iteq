@@ -57,14 +57,14 @@
 											<a class="unstyled"
 												href="<?php echo locale_url('products?search='.
 												urlencode($product->brand)); ?>">
-												<?php echo lang('brand').': '.$product->brand; ?>
+												<?php echo lang('brand').':&nbsp;&nbsp;&nbsp;'.$product->brand; ?>
 											</a>
 										</h4>
 									<?php endif; ?>
 									<h4>
 										<a class="unstyled"
 											href="<?php echo locale_url('products?category='.$product->category_slug); ?>">
-											<?php echo lang('category').': '.$product->category_name; ?>
+											<?php echo lang('category').':&nbsp;&nbsp;&nbsp;'.$product->category_name; ?>
 										</a>
 									</h4>
 									<br>
