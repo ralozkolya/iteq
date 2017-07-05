@@ -6,10 +6,13 @@ class Okey {
 
 	private $merchant;
 	private $key;
+	private $url;
 
 	public function __construct($params = NULL) {
 		$this->merchant = getenv('OKEY_MERCHANT_ID');
 		$this->key = getenv('OKEY_API_KEY');
+		$this->url = getenv('OKEY_URL');
+		$this->redirect_url = getenv('OKEY_REDIRECT_URL');
 	}
 
 	public function check($user, $address, $product) {
@@ -29,6 +32,31 @@ class Okey {
 
 		$client = new Client();
 
-		echo $this->key;
+		$response = $client->post($this->url, [
+			'json' => [
+				'merchant' => $this->merchant,
+				'testmode' => 0,
+				'totalprice' => $product->price,
+				'shippingPrice' => 0,
+				'address' => $address->address,
+				'city' => $address->city,
+				'ordernumber' => bin2hex(openssl_random_pseudo_bytes(64)),
+				'products' => [
+					[
+						'title' => $product->name,
+						'price' => $product->price,
+						'quantity' => 1,
+					],
+				],
+			],
+			'headers' => [
+				'Authorization' => $this->key,
+			],
+		]);
+
+		if($response->getStatusCode() === 200) {
+			$res = json_decode($response->getBody()->getContents());
+			redirect($this->redirect_url . $res->trans_id);
+		}
 	}
 }
