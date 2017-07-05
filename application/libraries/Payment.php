@@ -7,12 +7,16 @@ class Payment {
 
 	private $client;
 
-	private $cert_path = get_env('PAY_CERT_PATH');
-	private $cert_key = get_env('PAY_CERT_KEY');
+	private $cert_path;
+	private $cert_key;
 
-	private $merchant_url = get_env('PAY_URL');
+	private $merchant_url;
 
 	public function __construct() {
+
+		$this->cert_path = getenv('PAY_CERT_PATH');
+		$this->cert_key = getenv('PAY_CERT_KEY');
+		$this->merchant_url = getenv('PAY_URL');
 
 		$this->client = new Client(array(
 			'verify' => FALSE,
