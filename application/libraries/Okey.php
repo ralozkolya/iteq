@@ -58,5 +58,8 @@ class Okey {
 			$res = json_decode($response->getBody()->getContents());
 			redirect($this->redirect_url . $res->trans_id);
 		}
+
+		$ci->session->set_flashdata('error_message', lang('unexpected_error'));
+		redirect($ci->agent->referrer());
 	}
 }

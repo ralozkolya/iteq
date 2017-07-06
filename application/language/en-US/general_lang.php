@@ -108,3 +108,12 @@ $lang['password_recovery'] = 'Password recovery';
 $lang['follow_link'] = 'In order to change your password, please follow given link and edit password in your profile';
 $lang['recovery_sent'] = 'We sent instruction to specified email';
 $lang['change_password'] = 'Please change password';
+
+$lang['calculator'] = 'Calculator';
+$lang['period'] = 'Period';
+$lang['money_amount'] = 'Amount';
+$lang['percent'] = 'Percent';
+$lang['participation'] = 'Participation';
+$lang['months'] = 'Months';
+$lang['min_credit'] = 'Minimum amount for installment is 50 GEL';
+$lang['per_month'] = 'Per month';

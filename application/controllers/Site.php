@@ -122,6 +122,11 @@ class Site extends MY_Controller {
 			show_404();
 		}
 
+		if($product->price < 50) {
+			$this->session->set_flashdata('error_message', lang('min_credit'));
+			redirect($this->agent->referrer());
+		}
+
 		$this->load->view('pages/credit', $this->data);
 	}
 
@@ -137,7 +142,7 @@ class Site extends MY_Controller {
 
 		$post = $this->input->post();
 
-		echo $this->okey->check($user->id, $post['address'], $post['product']);
+		$this->okey->check($user->id, $post['address'], $post['product']);
 	}
 
 	public function confirm_order() {

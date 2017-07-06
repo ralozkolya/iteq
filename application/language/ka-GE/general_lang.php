@@ -108,3 +108,12 @@ $lang['password_recovery'] = 'პაროლის აღდგენა';
 $lang['follow_link'] = 'პაროლის აღსადგენად, გთხოვთ გადახვიდეთ მოცემულ ბმულზე და შეცვალოთ პაროლი თქვენს პროფილში';
 $lang['recovery_sent'] = 'მითითებულ მისამართზე გამოიგზავნა წერილი ინსტრუქციით';
 $lang['change_password'] = 'გთხოვთ შეცვალოთ პაროლი';
+
+$lang['calculator'] = 'კალკულატორი';
+$lang['period'] = 'პერიოდი';
+$lang['money_amount'] = 'თანხა';
+$lang['percent'] = 'პროცენტი';
+$lang['participation'] = 'თანამონაწილეობა';
+$lang['months'] = 'თვე';
+$lang['min_credit'] = 'განვადების მინიმალური თანხა 50 ლარია';
+$lang['per_month'] = 'თვეში';
