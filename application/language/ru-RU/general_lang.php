@@ -108,3 +108,12 @@ $lang['password_recovery'] = 'Восстановление пароля';
 $lang['follow_link'] = 'Чтобы восстановить пароль, перейдите на ссылку и измените пароль в вашем профиле';
 $lang['recovery_sent'] = 'Письмо с инструкциями отослано';
 $lang['change_password'] = 'Пожалуйста Измените пароль';
+
+$lang['calculator'] = 'Калькулятор';
+$lang['period'] = 'Период';
+$lang['money_amount'] = 'Сумма';
+$lang['percent'] = 'Процент';
+$lang['participation'] = 'Соучастие';
+$lang['months'] = 'Месяцев';
+$lang['min_credit'] = 'Минимальная сумма рассрочки - 50 Лари';
+$lang['per_month'] = 'В месяц';

@@ -17,6 +17,9 @@
 		<div class="content">
 			<div class="container main-content">
 				<div class="row">
+					<?php $this->load->view('elements/messages'); ?>
+				</div>
+				<div class="row">
 					<div class="col-sm-6">
 						<div class="container-fluid">
 							<div class="row">
