@@ -43,4 +43,5 @@ function calculate() {
 	$('#amount').val(credit.toFixed(2));
 	$('#per_month').val(perMonth.toFixed(2));
 	$('#total').val(total.toFixed(2));
+	$('#period').change();
 }
