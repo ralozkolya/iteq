@@ -106,7 +106,7 @@
 												<br>
 												<div>
 													<a href="http://www.tbcbank.ge/web/ka/apply-online-for-installment">
-														<img class="tbc-credit" src="<?php echo static_url('img/tbc.png?v='.V); ?>" alt="TBC installment">
+														<img class="tbc-credit" src="<?php echo static_url('img/tbc-installment.png?v='.V); ?>" alt="TBC installment">
 													</a>
 												</div>
 											<?php else: ?>
