@@ -106,25 +106,25 @@ class Site extends MY_Controller {
 
 	public function credit() {
 
+		$this->load->model(['Product', 'Address', 'Gallery']);
+
 		$user = $this->data['user'];
+		$this->data['product'] = $product = $this->Product->get($this->input->get('product'));
+
+		if($product->price < 50) {
+			$this->session->set_flashdata('error_message', lang('min_credit'));
+			redirect($this->agent->referrer());
+		}
 
 		if(!$user) {
 			redirect(locale_url('login'));
 		}
 
-		$this->load->model(['Product', 'Address', 'Gallery']);
-
 		$this->data['addresses'] = $this->Address->get_for_user($user->id);
-		$this->data['product'] = $product = $this->Product->get($this->input->get('product'));
 		$this->data['images'] = $this->Gallery->get_for_product($product->id);
 
 		if(!$product) {
 			show_404();
-		}
-
-		if($product->price < 50) {
-			$this->session->set_flashdata('error_message', lang('min_credit'));
-			redirect($this->agent->referrer());
 		}
 
 		$this->load->view('pages/credit', $this->data);
