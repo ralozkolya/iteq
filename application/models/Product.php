@@ -58,6 +58,24 @@ class Product extends MY_Model {
 		);
 	}
 
+	public function get_for_category($category) {
+
+		$filter = ['category' => $category];
+
+		$this->filter($filter);
+
+		$products = parent::get_list();
+		
+		$this->filter($filter);
+
+		$rows = $this->db->get($this->table)->num_rows();
+
+		return array(
+			'products' => $products,
+			'rows' => $rows,
+		);
+	}
+
 	public function get_cart($cart) {
 
 		$lang = get_lang_code(get_lang());
