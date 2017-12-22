@@ -67,12 +67,10 @@ class Admin extends CI_Controller {
 			}
 		}
 		
-		$this->data['category'] = $this->Category->get($id);
+		$category = $this->data['category'] = $this->Category->get($id);
 		$this->data['categories'] = $this->Category->get_top();
 		$this->data['subcategories'] = $this->Category->get_subcategories($id);
-		$this->data['products'] = $this->Product->get_filtered(array(
-			'category' => $this->data['category']->slug,
-		))['products'];
+		$this->data['products'] = $this->Product->get_for_category($category->slug)['products'];
 		$this->data['highlighted'] = 'categories';
 
 		$this->load->view('pages/admin/category', $this->data);
@@ -89,6 +87,7 @@ class Admin extends CI_Controller {
 			}
 
 			else {
+				$post['priority'] = -1;
 				$this->add('Product', $post);
 			}
 		}
